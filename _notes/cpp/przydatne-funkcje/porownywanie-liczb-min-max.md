@@ -1,5 +1,5 @@
 ---
 title: Porównywanie liczb - min() i max()
-categories: cpp, funkcje
+categories: [cpp, funkcje]
 categoryID: cpp-funkcje
 ---

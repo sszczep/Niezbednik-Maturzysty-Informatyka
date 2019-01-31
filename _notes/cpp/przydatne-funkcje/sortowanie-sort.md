@@ -1,5 +1,5 @@
 ---
 title: Sortowanie - sort()
-categories: cpp, funkcje
+categories: [cpp, funkcje]
 categoryID: cpp-funkcje
 ---
