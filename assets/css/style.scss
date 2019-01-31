@@ -19,6 +19,30 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+h1 {
+    font-size: 3vmax;
+}
+
+h2 {
+    font-size: 2.5vmax;
+}
+
+h3 {
+    font-size: 2vmax;
+}
+
+h4 {
+    font-size: 1.7vmax;
+}
+
+h5 {
+    font-size: 1.5vmax;
+}
+
+h6 {
+    font-size: 1.2vmax;
+}
+
 .app {
     background-color: $backgroundColor;
     color: $textColor;
