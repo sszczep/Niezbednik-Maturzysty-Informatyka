@@ -24,23 +24,23 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5vmax;
+    font-size: 2.7vmax;
 }
 
 h3 {
-    font-size: 2vmax;
+    font-size: 2.5vmax;
 }
 
 h4 {
-    font-size: 1.7vmax;
+    font-size: 2.2vmax;
 }
 
 h5 {
-    font-size: 1.5vmax;
+    font-size: 2vmax;
 }
 
 h6 {
-    font-size: 1.2vmax;
+    font-size: 1.8vmax;
 }
 
 .app {
@@ -75,10 +75,21 @@ h6 {
     span, a {
         display: inline-block;
         margin-bottom: 3px;
-        font-size: 1.2em;
+        font-size: 2vmax;
     }
 }
 
+.note-nav {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.note-nav a {
+    margin-top: auto; 
+    margin-left: 10px;
+    font-size: 1.8vmax;
+}
+
 .note-content {
-    font-size: 1.3rem;
+    font-size: 2vmax;
 }
