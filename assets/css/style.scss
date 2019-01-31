@@ -20,27 +20,27 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    font-size: 3vmax;
+    font-size: 5vmin;
 }
 
 h2 {
-    font-size: 2.7vmax;
+    font-size: 4.5vmin;
 }
 
 h3 {
-    font-size: 2.5vmax;
+    font-size: 4vmin;
 }
 
 h4 {
-    font-size: 2.2vmax;
+    font-size: 3.5vmin;
 }
 
 h5 {
-    font-size: 2vmax;
+    font-size: 3vmin;
 }
 
 h6 {
-    font-size: 1.8vmax;
+    font-size: 2.7vmin;
 }
 
 .app {
@@ -75,7 +75,10 @@ h6 {
     span, a {
         display: inline-block;
         margin-bottom: 3px;
-        font-size: 2vmax;
+    }
+
+    span, a, li:before {
+        font-size: 3.5vmin;
     }
 }
 
@@ -87,9 +90,9 @@ h6 {
 .note-nav a {
     margin-top: auto; 
     margin-left: 10px;
-    font-size: 1.8vmax;
+    font-size: 3vmin;
 }
 
 .note-content {
-    font-size: 2vmax;
+    font-size: 4vmin;
 }
