@@ -1,1 +1,0 @@
-Niezbędnik Maturzysty - Informatyka
