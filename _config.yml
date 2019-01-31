@@ -15,5 +15,4 @@ sass:
 markdown: kramdown
 theme: null
 
-baseurl: Niezbednik-Maturzysty-Informatyka
-url: https://sszczep.github.io
+baseurl: /Niezbednik-Maturzysty-Informatyka
