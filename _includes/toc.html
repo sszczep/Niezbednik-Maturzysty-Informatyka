@@ -1,0 +1,21 @@
+{% for category in include.categories %}
+    <li>
+        <span>{{ category.name }}</span>
+        {% assign links = site.notes | where: "categoryID", category.categoryID | sort: 'order', 'last'  %}
+
+        <ol>
+        {% for link in links  %}
+            <li>
+                {% assign contentLength = link.content | size %}
+                {% if contentLength > 1 %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                {% else %}
+                    <span>{{ link.title }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+
+        {% include toc.html categories=category.subcategories %}
+        </ol>
+    </li>
+{% endfor %}

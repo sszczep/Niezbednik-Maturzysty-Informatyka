@@ -1,0 +1,14 @@
+- categoryID: podstawowe-informacje
+  name: Podstawowe Informacje
+
+- categoryID: algorytmy
+  name: Algorytmy
+
+- categoryID: cpp
+  name: C++
+  subcategories:
+    - categoryID: cpp-funkcje
+      name: "Przydatne funkcje"
+    
+- categoryID: testy-wyboru
+  name: "Testy wyboru"

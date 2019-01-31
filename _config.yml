@@ -1,0 +1,17 @@
+collections:
+  notes:
+    output: true
+
+defaults:
+  - scope:
+      type: notes
+    values:
+      layout: note
+      permalink: /:categories/:title
+
+sass:
+  style: compressed
+
+markdown: kramdown
+theme: null
+plugins:
