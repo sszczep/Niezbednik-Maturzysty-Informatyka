@@ -5,6 +5,25 @@ $backgroundColor: #201F1D;
 $textColor: #fff;
 $linkColor: #6ABED8;
 
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+    html {
+        font-size: calc(100vw * 0.01 + 10px);
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    html {
+        font-size: 18px;
+    }
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -17,30 +36,6 @@ a, a:hover, a:visited {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-}
-
-h1 {
-    font-size: 5vmin;
-}
-
-h2 {
-    font-size: 4.5vmin;
-}
-
-h3 {
-    font-size: 4vmin;
-}
-
-h4 {
-    font-size: 3.5vmin;
-}
-
-h5 {
-    font-size: 3vmin;
-}
-
-h6 {
-    font-size: 2.7vmin;
 }
 
 .app {
@@ -78,7 +73,7 @@ h6 {
     }
 
     span, a, li:before {
-        font-size: 3.5vmin;
+        font-size: 1.25rem;
     }
 }
 
@@ -90,9 +85,9 @@ h6 {
 .note-nav a {
     margin-top: auto; 
     margin-left: 10px;
-    font-size: 3vmin;
+    font-size: 1rem;
 }
 
 .note-content {
-    font-size: 4vmin;
+    font-size: 1.5rem;
 }
