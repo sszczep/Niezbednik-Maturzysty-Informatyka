@@ -13,6 +13,7 @@ sass:
   style: compressed
 
 markdown: kramdown
+highlighter: rouge
 theme: null
 
 baseurl: /Niezbednik-Maturzysty-Informatyka

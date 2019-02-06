@@ -6,22 +6,8 @@ $textColor: #fff;
 $linkColor: #6ABED8;
 
 
-@media only screen and (max-width: 400px) {
-    html {
-        font-size: 14px;
-    }
-}
-
-@media only screen and (min-width: 400px) and (max-width: 800px) {
-    html {
-        font-size: calc(100vw * 0.01 + 10px);
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    html {
-        font-size: 18px;
-    }
+html {
+    font-size: 12px;
 }
 
 html, body {
@@ -34,14 +20,11 @@ a, a:hover, a:visited {
     color: $linkColor;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-
 .app {
     background-color: $backgroundColor;
     color: $textColor;
     font-family: 'Roboto', sans-serif;
+    font-weight: regular;
     text-decoration: none;
     max-width: 1000px;
     margin: 0 auto;
@@ -80,14 +63,27 @@ h1, h2, h3, h4, h5, h6, p {
 .note-nav {
     display: flex; 
     justify-content: space-between;
+
+    h1 {
+        margin: 0 !important;
+    }
 }
 
 .note-nav a {
     margin-top: auto; 
     margin-left: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .note-content {
     font-size: 1.5rem;
+    font-weight: light;
+}
+
+th, td {
+    padding: 10px 20px 10px 0px;
+}
+
+thead tr, tbody tr:not(:last-child) {
+    border-bottom: 1px solid #dfe2e5;
 }
