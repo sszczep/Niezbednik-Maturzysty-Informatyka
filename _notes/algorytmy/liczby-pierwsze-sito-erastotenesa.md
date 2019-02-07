@@ -15,15 +15,15 @@ Parę liczb pierwszych *p* i *q*, nazywamy bliźniaczymi, gdy zachodzi równoś�
 Przykładem takkich liczb mogą być pary: $$ \{3, 5\}, \{5, 7\}, \{11, 13\} $$.
 
 ### Sprawdzanie czy liczba jest liczbą pierwszą
-Aby sprawdzić czy liczba $$ n $$ jest pierwsza, należy przeiterować przez kolejne liczby z przedziału $$ \langle 2, \sqrt{n}) $$.
+Aby sprawdzić czy liczba $$ n $$ jest pierwsza, należy przeiterować przez kolejne liczby z przedziału $$ \langle 2, \sqrt{n}\rangle $$.
 <br />
 <br />
 Przykładowa funkcja w języku C++:
 
 {% highlight cpp linenos %}
 bool czyPierwsza(int liczba) {
-	// sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n))
-	for(int i = 2; i < sqrt(liczba); i++) {
+	// sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n)>
+	for(int i = 2; i <= sqrt(liczba); i++) {
 		// jeżeli znaleźliśmy dzielnik,
 		// liczba nie jest pierwsza,
 		// zwracamy fałsz
@@ -104,7 +104,7 @@ void sito(bool tablica[], int n) {
 		tablica[i] = true;
 	}
 	
-	for(int i = 2; i < sqrt(n); i++) {
+	for(int i = 2; i <= sqrt(n); i++) {
 		// jeżeli liczba jest już wykreślona,
 		// nie ma potrzebny sprawdzać jej wielokrotności
 		// (również będą już wykreślone)
