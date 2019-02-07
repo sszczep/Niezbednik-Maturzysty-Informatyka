@@ -22,18 +22,18 @@ Przykładowa funkcja w języku C++:
 
 {% highlight cpp linenos %}
 bool czyPierwsza(int liczba) {
-// sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n))
-for(int i = 2; i < sqrt(liczba); i++) {
-	// jeżeli znaleźliśmy dzielnik,
-	// liczba nie jest pierwsza,
-	// zwracamy fałsz
-	if(liczba % i == 0) return false;
-}
+	// sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n))
+	for(int i = 2; i < sqrt(liczba); i++) {
+		// jeżeli znaleźliśmy dzielnik,
+		// liczba nie jest pierwsza,
+		// zwracamy fałsz
+		if(liczba % i == 0) return false;
+	}
 
-// jeżeli nie znaleźliśmy żadnego dzielnika,
-// oznacza to że liczba jest pierwsza,
-// zwracamy prawdę
-return true;
+	// jeżeli nie znaleźliśmy żadnego dzielnika,
+	// oznacza to że liczba jest pierwsza,
+	// zwracamy prawdę
+	return true;
 }
 {% endhighlight %}
 
