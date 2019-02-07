@@ -63,7 +63,6 @@ $$
 \end{Bmatrix}
 $$
 
-<br />
 Zaczynamy od wszystkich wielokrotności 2:
 <br />
 
@@ -77,7 +76,6 @@ $$
 \end{Bmatrix}
 $$
 
-<br />
 To samo robimy dla kolejnej liczby czyli 3:
 <br />
 
@@ -91,7 +89,6 @@ $$
 \end{Bmatrix}
 $$
 
-<br />
 Po sprawdzeniu pozostałych liczb okazuje się, że wykreśliliśmy już ich wszystkie wielokrotności. Jedyne niewykreślone liczby jakie nam zostały to $$ 3, 5, 7, 11, 13 $$, czyli liczby pierwsze z zadanego przedziału. Warto napomnieć, że obowiązuje tutaj ta sama zasada co w sprawdzaniu czy liczba jest pierwsza - wystarczy sprawdzać liczby do $$ \sqrt{n} $$.
 
 Implementacja algorytmu w języku C++:
