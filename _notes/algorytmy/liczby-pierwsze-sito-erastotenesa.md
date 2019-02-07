@@ -46,7 +46,7 @@ std::cout << "Liczba " << (pierwsza ? "" : "nie ") << "jest pierwsza";
 Liczba n | Dzielniki n | Dane wyjściowe programu
 --- | --- | ---
 11 | 1, 11 | Liczba jest pierwsza
-15 | 1, 3, 5 | Liczba nie jest pierwsza
+15 | 1, 3, 5, 15 | Liczba nie jest pierwsza
 
 ### Sito Erastotenesa
 
