@@ -87,3 +87,7 @@ th, td {
 thead tr, tbody tr:not(:last-child) {
     border-bottom: 1px solid #dfe2e5;
 }
+
+.MathJax_SVG_Display {
+    overflow-x: auto;
+}
