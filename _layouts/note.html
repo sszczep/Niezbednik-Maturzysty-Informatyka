@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<nav class="note-nav">
-    <h1>{{ page.title }}</h1>
+<nav class="note-top-nav">
+    <h2>{{ page.title }}</h2>
     <a href="{{ '/' | relative_url }}">Powróć do strony głównej</a>
 </nav>
 <hr style="margin-bottom: 20px;" />
@@ -12,3 +12,46 @@ layout: default
 <div class="note-content">
     {{ content }}
 </div>
+
+<hr style="margin-top: 20px;" />
+<nav class="note-bottom-nav">
+    {% assign previous = nil %}
+    {% assign next = nil %}
+
+    {% assign links = site.notes | where: "categoryID", page.categoryID | sort: 'order', 'last'  %}
+
+    {% assign isNext = false %}
+    {% for link in links %}
+        {% assign contentLength = link.content | size %}
+        {% if contentLength > 1 %}
+            {% if link.title == page.title %}
+                {% assign isNext = true %}
+                {% continue %}
+            {% endif %}
+
+            {% unless isNext %}
+                {% assign previous = link %}
+            {% else %}
+                {% assign next = link %}
+                {% break %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+    <div>
+        <h3>Poprzednia notatka</h3>
+        {% if previous %}
+            <a href="{{ previous.url | relative_url }}">{{ previous.title }}</a>  
+        {% else %}
+            <span>brak</span>
+        {% endif %}
+    </div>
+
+    <div style="text-align: right">
+        <h3>Następna notatka</h3>
+        {% if next %}
+            <a href="{{ next.url | relative_url }}">{{ next.title }}</a>   
+        {% else %}
+            <span>brak</span>
+        {% endif %}
+    </div>
+</nav>

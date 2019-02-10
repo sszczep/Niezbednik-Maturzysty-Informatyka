@@ -7,7 +7,11 @@ $linkColor: #6ABED8;
 
 
 html {
-    font-size: 12px;
+    font-size: 16px;
+
+    @media only screen and (min-width: 600px) {
+        font-size: 18px;
+    }
 }
 
 html, body {
@@ -15,9 +19,21 @@ html, body {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0 !important;
+}
+
 a, a:hover, a:visited {
     text-decoration: none;
     color: $linkColor;
+}
+
+th, td {
+    padding: 10px 20px 10px 0px;
+}
+
+thead tr, tbody tr:not(:last-child) {
+    border-bottom: 1px solid #dfe2e5;
 }
 
 .app {
@@ -28,13 +44,14 @@ a, a:hover, a:visited {
     text-decoration: none;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 5vh 5vw;
+    padding: 3vh 5vw;
 }
 
 .nav {
     ol {
         margin: 0;
         counter-reset: item;
+        padding-left: 20px;
     }
 
     ol:first-child {
@@ -55,39 +72,41 @@ a, a:hover, a:visited {
         margin-bottom: 3px;
     }
 
-    span, a, li:before {
-        font-size: 1.5rem;
+    li, li:before {
+        font-size: 1.1rem;
     }
 }
 
-.note-nav {
+.note-top-nav {
     display: flex; 
     justify-content: space-between;
 
-    h1 {
+    h2 {
         margin: 0 !important;
+    }
+
+    a {
+        text-align: right;
+        margin-top: auto; 
+        margin-left: 10px;
     }
 }
 
-.note-nav a {
-    margin-top: auto; 
-    margin-left: 10px;
+.note-content {
+    font-weight: light;
     font-size: 1.2rem;
 }
 
-.note-content {
-    font-size: 1.5rem;
-    font-weight: light;
-}
+.note-bottom-nav {
+    display: flex;
+    justify-content: space-between;
 
-th, td {
-    padding: 10px 20px 10px 0px;
-}
-
-thead tr, tbody tr:not(:last-child) {
-    border-bottom: 1px solid #dfe2e5;
+    h3 {
+        margin: 10px 0 !important;
+    }
 }
 
 .MathJax_SVG_Display {
     overflow-x: auto;
+    margin: 30px 0 !important;
 }
