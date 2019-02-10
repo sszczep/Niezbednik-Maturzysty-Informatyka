@@ -51,7 +51,6 @@ Liczba n | Dzielniki n | Dane wyjściowe programu
 ### Sito Erastotenesa
 
 Sito Erastotenesa pozwala nam na szybkie wyznaczanie liczb pierwszych z przedzialu $$ \langle 2, n \rangle $$. Strategia nie jest skomplikowana. Wystarczy znajdować kolejne liczby pierwsze i wykreślać jej wielokrotności. Dla przykładu, zaprezentuję przesiewanie liczb od 2 do 16. Na początku tworzymy tablicę wszystkich liczb:
-<br />
 
 $$
 \require{cancel}
@@ -64,7 +63,6 @@ $$
 $$
 
 Zaczynamy od wszystkich wielokrotności 2:
-<br />
 
 $$
 \require{cancel}
@@ -77,7 +75,6 @@ $$
 $$
 
 To samo robimy dla kolejnej liczby czyli 3:
-<br />
 
 $$
 \require{cancel}
