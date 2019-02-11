@@ -12,7 +12,7 @@ Przykładowe liczby pierwsze: $$ 2, 3, 5, 7, 11, 13, 17 $$
 ### Liczby pierwsze bliźniacze
 Parę liczb pierwszych *p* i *q*, nazywamy bliźniaczymi, gdy zachodzi równość $$ p = q + 2 $$.
 
-Przykładem takkich liczb mogą być pary: $$ \{3, 5\}, \{5, 7\}, \{11, 13\} $$.
+Przykładem takich liczb mogą być pary: $$ \{3, 5\}, \{5, 7\}, \{11, 13\} $$.
 
 <br />
 

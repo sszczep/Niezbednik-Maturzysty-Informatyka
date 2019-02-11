@@ -9,6 +9,10 @@ $linkColor: #6ABED8;
 
 html {
     font-size: 16px;
+
+    @media only screen and (min-width: 400px) {
+        font-size: 14px;
+    }
 }
 
 html, body {
@@ -31,6 +35,10 @@ th, td {
 
 thead tr, tbody tr:not(:last-child) {
     border-bottom: 1px solid #dfe2e5;
+}
+
+p {
+    margin: 10px 0 !important;;
 }
 
 .app {
@@ -70,12 +78,15 @@ thead tr, tbody tr:not(:last-child) {
     }
 
     span, a {
-        display: inline-block;
         margin-bottom: 3px;
     }
 
     li, li:before {
         font-size: 1.1rem;
+
+        @media only screen and (min-width: 400px) {
+            font-size: 1.2rem;
+        }
     }
 }
 
