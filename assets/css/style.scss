@@ -43,11 +43,14 @@ thead tr, tbody tr:not(:last-child) {
     font-family: 'Roboto', sans-serif;
     font-weight: regular;
     text-decoration: none;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 3vh 5vw 140px 5vw;
-    position: relative;
-    min-height: 100%;
 }
 
 .nav {
