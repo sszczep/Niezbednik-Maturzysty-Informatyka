@@ -23,6 +23,9 @@ Przykładowa funkcja w języku C++:
 
 {% highlight cpp linenos %}
 bool czyPierwsza(int liczba) {
+	// jeżeli liczba jest mniejsza bądź równa zwracamy false
+	if(liczba <= 1) return false;
+	
 	// sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n)>
 	for(int i = 2; i <= sqrt(liczba); i++) {
 		// jeżeli znaleźliśmy dzielnik,
