@@ -4,20 +4,21 @@ categories: algorytmy
 categoryID: algorytmy
 ---
 Liczby pierwsze to takie liczby naturalne większe od 1, które mają dwa dzielniki naturalne - 1 i siebie samą. Liczby większe od 1 niebędące liczbami pierwszymi nazywami liczbami złożonymi.
-<br />
-<br />
+
 Przykładowe liczby pierwsze: $$ 2, 3, 5, 7, 11, 13, 17 $$
+
+<br />
 
 ### Liczby pierwsze bliźniacze
 Parę liczb pierwszych *p* i *q*, nazywamy bliźniaczymi, gdy zachodzi równość $$ p = q + 2 $$.
-<br />
-<br />
+
 Przykładem takkich liczb mogą być pary: $$ \{3, 5\}, \{5, 7\}, \{11, 13\} $$.
+
+<br />
 
 ### Sprawdzanie czy liczba jest liczbą pierwszą
 Aby sprawdzić czy liczba $$ n $$ jest pierwsza, należy przeiterować przez kolejne liczby z przedziału $$ \langle 2, \sqrt{n}\rangle $$.
-<br />
-<br />
+
 Przykładowa funkcja w języku C++:
 
 {% highlight cpp linenos %}
@@ -47,6 +48,8 @@ Liczba n | Dzielniki n | Dane wyjściowe programu
 --- | --- | ---
 11 | 1, 11 | Liczba jest pierwsza
 15 | 1, 3, 5, 15 | Liczba nie jest pierwsza
+
+<br />
 
 ### Sito Erastotenesa
 

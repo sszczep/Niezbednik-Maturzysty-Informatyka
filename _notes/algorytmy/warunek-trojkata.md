@@ -22,9 +22,9 @@ Powyższy układ jest łatwiejszy do zaimplementowania. Nie musimy przejmować s
 Funkcja realizująca sprawdzanie warunku istnienia trójkąta w języku C++:
 {% highlight cpp linenos %}
 bool czyTrojkatIstnieje(double a, double b, double c) {
-    return (a + b > c) && 
-           (a + c > b) && 
-           (b + c > a);
+	return (a + b > c) && 
+		   (a + c > b) && 
+		   (b + c > a);
 }
 {% endhighlight %}
 
@@ -32,7 +32,7 @@ bool czyTrojkatIstnieje(double a, double b, double c) {
 
 ### Klasyfikacja trójkątów ze względu na długości boków
 
-**róźnoboczny** - trójkąt o trzech bokach różnej długości
+**różnoboczny** - trójkąt o trzech bokach różnej długości
 
 **równoramienny** - trójkąt o dwóch bokach (ramionach) tej samej długości
 
@@ -81,11 +81,14 @@ enum KlasyfikacjaKaty {
 
 class Trojkat {
 	double m_a, m_b, m_c;
-	
-	public: 
+
+	KlasyfikacjaBoki klasyfikujBoki();
+	KlasyfikacjaKaty klasyfikujKaty();
+
+	public:
 		// Konstruktor przyjmujący długości boków trójkąta
 		Trojkat(double a, double b, double c);
-		
+
 		// Metoda wyświetlająca informacje o trójkącie
 		void info();
 };
@@ -95,7 +98,7 @@ Trojkat::Trojkat(double a, double b, double c) : m_a(a), m_b(b), m_c(c) {
 	if(m_a > m_b) swap(m_a, m_b);
 	if(m_a > m_c) swap(m_a, m_c);
 	if(m_b > m_c) swap(m_b, m_c);
-	
+
 	// Wyświetl informacje o trójkącie
 	info();
 }
@@ -103,14 +106,14 @@ Trojkat::Trojkat(double a, double b, double c) : m_a(a), m_b(b), m_c(c) {
 KlasyfikacjaBoki Trojkat::klasyfikujBoki() {
 	// Jeżeli trójkąt ma wszystkie boki rózne to jest różnoboczny
 	if(m_a != m_b && m_a != m_c && m_b != m_c) return roznoboczny;
-	
+
 	// Jeżli trójkąt ma parę takich samych boków (a i b, lub b i c)
 	if(m_a == m_b || m_b == m_c) {
-		
+
 		// Jeżeli trójkąt ma rózne boki a i c to jest rownoramienny
 		// Wówczas ramiona są parą boków a i b lub b i c
 		if(m_a != m_c) return rownoramienny;
-		
+
 		// W przeciwnym wypadku jest równoboczny (a == b == c)
 		else return rownoboczny;
 	}
@@ -119,33 +122,33 @@ KlasyfikacjaBoki Trojkat::klasyfikujBoki() {
 KlasyfikacjaKaty Trojkat::klasyfikujKaty() {
 	const double sumaKwadratow = m_a * m_a + m_b * m_b;
 	const double kwadratC = m_c * m_c;
-	
+
 	// Zależności wynikające z twierdzenia cosinusów:
-	
+
 	// Jeżeli suma kwadratów a i b jest większa od kwadratu c to jest ostrokątny
 	if(sumaKwadratow > kwadratC) return ostrokatny;
-	
-	// Jeżeli suma kwadratów a i b jest równa kwadratowi c to jest prostokątny (twierdzenie Pitagorasa)
+
+	// Jeżeli suma kwadratów a i b jest równa kwadratowi c to jest prostokątny
 	if(sumaKwadratow == kwadratC) return prostokatny;
-	
+
 	// W przeciwnym wypadku jest rozwartokątny
 	else return rozwartokatny;
 }
 
 void Trojkat::info() {
-	cout << "Trójkąt o bokach " 
-			 << m_a << ", " 
-			 << m_b << ", " 
-			 << m_c << " ";
-	
+	cout << "Trójkąt o bokach "
+		 << m_a << ", "
+		 << m_b << ", "
+		 << m_c << " ";
+
 	// Jeżeli trójkąt nie istnieje, wypisz odpowiedni tekst
 	if(m_a + m_b <= m_c) {
 		cout << "nie istnieje" << endl;
 		return;
 	}
-	
+
 	// W przeciwnym wypadku określ rodzaj trójkąta
-	
+
 	// W zależności od zwróconej wartości przez metody klasyfikuj*
 	// wyświetl odpowiedni tekst
 	switch(klasyfikujBoki()) {
@@ -157,10 +160,11 @@ void Trojkat::info() {
 			break;
 		case rownoboczny:
 			cout << "równoboczny";
+			break;
 	}
-	
+
 	cout << " i ";
-	
+
 	switch(klasyfikujKaty()) {
 		case ostrokatny:
 			cout << "ostrokątny";
@@ -170,13 +174,14 @@ void Trojkat::info() {
 			break;
 		case rozwartokatny:
 			cout << "rozwartokątny";
+			break;
 	}
-	
+
 	cout << endl;
 }
 
 int main() {
-	// Sprawdzamy poprawność algorytmu dla róznych trójkątów
+	// Sprawdzamy poprawność algorytmu dla różnych trójkątów
 	Trojkat(7, 3.5, 3.5);
 	Trojkat(4, 5, 6);
 	Trojkat(5, 3, 4);

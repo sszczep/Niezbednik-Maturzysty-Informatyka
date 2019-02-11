@@ -21,11 +21,15 @@ $$
 \end{array}
 $$
 
-## Wariacje ciągu
+<br />
+
+### Wariacje ciągu
 
 Istnieją też ciągi wyższych stopni, na przykład: ciąg Tribonacciego, Tetranacciego, Pentanacciego, Hexanacciego itd. Różnią się jedynie ilością sumowanych poprzednich wyrazów ciągu. 
 
-### Ciąg Tribonacciego
+<br />
+
+#### Ciąg Tribonacciego
 
 Sumujemy trzy poprzednie wyrazy ciągu. 
 
@@ -37,7 +41,9 @@ F_{n-3} + F_{n-2} + F_{n-1} & \text{ dla } n>2
 \end{cases}
 $$
 
-### Ciąg Tetranacciego
+<br />
+
+#### Ciąg Tetranacciego
 
 Sumujemy cztery poprzednie wyrazy ciągu. 
 
@@ -49,7 +55,9 @@ F_{n-4} + F_{n-3} + F_{n-2} + F_{n-1} & \text{ dla } n>3
 \end{cases}
 $$
 
-### Wzór ogólny
+<br />
+
+#### Wzór ogólny
 
 Dowolny ciąg $$ k $$ stopnia możemy wyrazić następująco:
 
@@ -61,8 +69,9 @@ F_{n-k} + \ ... \ + F_{n-1} & \text{ dla } n>k+1
 \end{cases}
 $$
 
+<br />
 
-## Kod C++
+### Kod C++
 {% highlight cpp linenos %}
 #include <iostream>
 using namespace std;
@@ -103,7 +112,7 @@ int main() {
 }
 {% endhighlight %}
 
-### Wyjście programu
+#### Wyjście programu
 
 {% highlight none %}
 fibonacci(10) = 55
