@@ -107,11 +107,11 @@ KlasyfikacjaBoki Trojkat::klasyfikujBoki() {
 	// Jeżeli trójkąt ma wszystkie boki rózne to jest różnoboczny
 	if(m_a != m_b && m_a != m_c && m_b != m_c) return roznoboczny;
 
-	// Jeżli trójkąt ma parę takich samych boków (a i b, lub b i c)
+	// Jeżli trójkąt ma parę takich samych boków (a i b lub b i c)
 	if(m_a == m_b || m_b == m_c) {
 
-		// Jeżeli trójkąt ma rózne boki a i c to jest rownoramienny
-		// Wówczas ramiona są parą boków a i b lub b i c
+		// Jeżeli trójkąt ma rózne boki a i c to jest równoramienny,
+		// wówczas ramiona są parą boków a i b lub b i c
 		if(m_a != m_c) return rownoramienny;
 
 		// W przeciwnym wypadku jest równoboczny (a == b == c)

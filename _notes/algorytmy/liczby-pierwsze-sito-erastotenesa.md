@@ -23,10 +23,10 @@ Przykładowa funkcja w języku C++:
 
 {% highlight cpp linenos %}
 bool czyPierwsza(int liczba) {
-	// jeżeli liczba jest mniejsza bądź równa zwracamy false
+	// Jeżeli liczba jest mniejsza bądź równa zwracamy false
 	if(liczba <= 1) return false;
-	
-	// sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n)>
+
+	// Sprawdzamy wszystkie liczby naturalne z przedzialu <2, sqrt(n)>
 	for(int i = 2; i <= sqrt(liczba); i++) {
 		// jeżeli znaleźliśmy dzielnik,
 		// liczba nie jest pierwsza,
@@ -34,7 +34,7 @@ bool czyPierwsza(int liczba) {
 		if(liczba % i == 0) return false;
 	}
 
-	// jeżeli nie znaleźliśmy żadnego dzielnika,
+	// Jeżeli nie znaleźliśmy żadnego dzielnika,
 	// oznacza to że liczba jest pierwsza,
 	// zwracamy prawdę
 	return true;
@@ -101,19 +101,19 @@ Implementacja algorytmu w języku C++:
 using namespace std;
 
 void sito(bool tablica[], int n) {
-	// tablica domyślnie jest wypelniona wartościami false
-	// dla wszystkich liczb >= 2, ustawiamy wartość początkową true
+	// Tablica domyślnie jest wypelniona wartościami false
+	// Dla wszystkich liczb >= 2, ustawiamy wartość początkową true
 	for(int i = 2; i <= n; i++) {
 		tablica[i] = true;
 	}
 	
 	for(int i = 2; i <= sqrt(n); i++) {
-		// jeżeli liczba jest już wykreślona,
+		// Jeżeli liczba jest już wykreślona,
 		// nie ma potrzebny sprawdzać jej wielokrotności
 		// (również będą już wykreślone)
 		if(tablica[i] == false) continue;
 		
-		// wykreślamy wielokrotności liczby
+		// Wykreślamy wielokrotności liczby
 		for(int j = i * 2; j <= n; j += i) {
 			tablica[j] = false;
 		}
@@ -123,15 +123,15 @@ void sito(bool tablica[], int n) {
 int main() {
 	const int n = 100;
 	
-	// inicjalizujemy tablicę o wielkości n + 1
-	// dla uproszczenia algorytmu, tablica będzie mieścić liczby od 0 do n
-	// dzięki temu indeks będzie reprezentować liczbę
+	// Inicjalizujemy tablicę o wielkości n + 1
+	// Dla uproszczenia algorytmu, tablica będzie mieścić liczby od 0 do n
+	// Dzięki temu indeks będzie reprezentować liczbę
 	bool tablica[n + 1] = {};
 	
-	// wywołujemy funkcję przesiewającą tablicę
+	// Wywołujemy funkcję przesiewającą tablicę
 	sito(tablica, n);
 	
-	// wyświetlamy wszystkie liczby pierwsze
+	// Wyświetlamy wszystkie liczby pierwsze
 	for(int i = 2; i <= n; i++) {
 		if(tablica[i]) cout << i << " ";
 	}
