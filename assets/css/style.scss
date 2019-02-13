@@ -124,6 +124,13 @@ p {
     margin: 30px 0 !important;
 }
 
+li .MathJax_SVG_Display {
+    display: inline-block !important;
+    text-align: left !important;
+    vertical-align: middle;
+    margin: 0 !important;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
