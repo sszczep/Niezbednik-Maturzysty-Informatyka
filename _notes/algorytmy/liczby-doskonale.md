@@ -65,7 +65,6 @@ Najlepszym sposobem na generowanie liczb pierwszych byłoby użycie <a href="{{'
 
 {% highlight cpp linenos %}
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 bool czyDoskonala(int liczba) {
@@ -78,7 +77,7 @@ bool czyDoskonala(int liczba) {
 		}
 	}
 
-	// Jeżeli suma dzielników jest równa liczbie, liczba jest doskonałą
+	// Jeżeli suma dzielników jest równa liczbie, liczba jest doskonała
 	return liczba == sumaDzielnikow;
 }
 
