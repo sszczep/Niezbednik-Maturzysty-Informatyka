@@ -31,7 +31,7 @@ $$
 \tfrac{65}{64}
 $$
 
-Jak znaleźć wspólny mianownik? Posłużymy się wcześniej poznanym NWW. Wspólny mianownik będzie równy największej wspólnej wielokrotności obu mianowników, czyli:
+Jak znaleźć wspólny mianownik? Posłużymy się wcześniej poznanym NWW. Wspólny mianownik będzie równy najmniejszej wspólnej wielokrotności obu mianowników, czyli:
 
 $$ mianownik_{nowy} = NWW(mianownik_{stary1}, mianownik_{stary2}) $$
 
